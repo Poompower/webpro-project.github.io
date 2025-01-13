@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Chonburi&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font: bold 22px 'Chonburi', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1d1d1f;
+        /* Black background for luxury feel */
+        color: #d4af37;
+        /* Gold text */
+    }
+
+    header {
+        background-color: #1d1d1f;
+        /* Dark black for header */
+        border-bottom: 5px solid #d4af37;
+        /* Gold border for luxurious accent */
+    }
+
+    header .logo img {
+        width: 250px;
+    }
+
+    header p {
+        font-size: 1.5rem;
+        color: #d4af37;
+        margin-left: 15px;
+    }
+
+    nav a {
+        font-weight: bold;
+        color: #d4af37;
+        text-decoration: none;
+        margin-right: 15px;
+    }
+
+    nav a:hover {
+        color: #EE1C25;
+        /* Red hover effect */
+    }
+
+    .title-show {
+        background-color: #EE1C25;
+        /* Bright red for contrast */
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    .text-center h1 {
+        color: #ebd17b;
+        /* Gold */
+    }
+
+    .about p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #fff;
+    }
+
+    .menu-container {
+        background-color: #1d1d20;
+        color: #d4af37;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-tabs .nav-link {
+        color: #d4af37;
+        background-color: #2a2a2e;
+        border: 1px solid #d4af37;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    .nav-tabs .nav-link.active {
+        background-color: #EE1C25;
+        color: #fff;
+    }
+
+    .nav-pills .nav-link {
+        color: #d4af37;
+        background-color: #2a2a2e;
+        border: 1px solid #d4af37;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #EE1C25;
+        color: #fff;
+    }
+
+    .scroll-container {
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #1c1c1e;
+        border: 1px solid #d4af37;
+        border-radius: 5px;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: #d4af37;
+        border-radius: 10px;
+    }
+
+    footer {
+        background-color: #111;
+        color: #d4af37;
+        text-align: center;
+        padding: 10px;
+        border-top: 2px solid #d4af37;
+    }
+
+    footer a {
+        color: #EE1C25;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #d4af37;
+    }
+
+    .card {
+        border: 3px solid #EE1C25;
+        transition: transform 0.8s ease, filter 0.8s ease;
+    }
+
+    .card:hover {
+        border: 7px solid #f3bc4d;
+        transform: scale(1.035);
+        filter: brightness(1.05);
+        background-color: #1d1d1f;
+    }
+</style>
+
+
+<body>
+    <div class="container-fluid">
+        <header class="header-restauraunt d-flex justify-content-between align-items-center fixed-top"
+            style="height: 10%;">
+            <div class="logo d-flex align-items-center ml-1justify-content-left">
+                <img src="https://github.com/Poompower/WebPro/blob/main/picProject/logoo%20(3).png?raw=true"
+                    alt="Little Chef Logo" draggable="false" style="width: 100px;">
+
+                <p class="text-left">Little Chef-พ่อครัวน้อย</p>
+
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#">Promotion</a>
+                <a href="#">About</a>
+                <a href="#refferrences">Refferrences</a>
+            </nav>
+
+        </header>
+        <div class="home" id="home"></div>
+        <br><br><br><br><br>
+        <div class="title-show text-center" style="background-color: #EE1C25; padding: 10px; margin-bottom: 0;">
+            <h1>Little Chef-พ่อครัวน้อย</h1>
+            <p>พ่อครัวน้อย กระเพราถาดโบราณไฟลุก</p>
+        </div>
+        <img src="https://github.com/Poompower/WebPro/blob/main/picProject/Background.png?raw=true" alt=""
+            style="width: 100%; margin-top: 0;">
+        <aside class="about">
+            <p class="container mt-5 text-">
+                พ่อครัวน้อย เป็นร้านอาหารตามสั่งที่ได้รับความนิยมในกรุงเทพฯ โดดเด่นด้วยเมนู <font
+                    style="color: #EE1C25;">กะเพราถาดโบราณไฟลุก</font>
+                ซึ่งเป็นเอกลักษณ์ของร้านที่ลูกค้าหลายคนต้องการลอง<br>
+                ร้านนี้มีจุดเด่นในด้านความหลากหลายของเมนูและความสดใหม่ของวัตถุดิบ
+                รวมถึงการปรุงอาหารที่เน้นรสชาติแบบไทยแท้ โดยเมนูยอดนิยม ได้แก่ ข้าวกะเพราหมูสับ ข้าวไข่ข้นหน้าต่าง ๆ<br>
+                และอาหารจานด่วนหลากหลายประเภทที่ทำเสร็จรวดเร็ว เหมาะสำหรับคนที่ต้องการอาหารอร่อยในราคาสบายกระเป๋า<br>
+
+                ร้านพ่อครัวน้อยมีสาขาหลายแห่งในกรุงเทพฯ เช่น สาขาอนุสาวรีย์ชัยสมรภูมิ (สาขา 3) และสาขาลาดกระบัง
+                สุวรรณภูมิ (สาขา 2) ซึ่งทุกสาขาเปิดให้บริการตลอด 24 ชั่วโมง
+                เพื่อตอบโจทย์ลูกค้าที่ต้องการอาหารในช่วงเวลาต่าง ๆ ไม่ว่าจะเช้าตรู่ หรือดึกดื่น
+                ร้านยังได้รับการชื่นชมในเรื่องของความสะอาด การบริการที่รวดเร็ว และบรรยากาศที่เป็นกันเอง
+
+                นอกจากการให้บริการที่หน้าร้าน พ่อครัวน้อยยังมีบริการเดลิเวอรีผ่านแพลตฟอร์มต่าง ๆ เช่น Foodpanda,
+                GrabFood และ LineMan เพื่ออำนวยความสะดวกให้กับลูกค้าที่ต้องการทานอาหารที่บ้านหรือที่ทำงาน
+                ร้านยังมีโปรโมชันพิเศษสำหรับการสั่งซื้อผ่านแอปพลิเคชันในบางช่วงเวลาอีกด้วย
+
+                ความสำเร็จของพ่อครัวน้อยเกิดจากการผสมผสานระหว่างคุณภาพของอาหาร ราคาที่เข้าถึงได้ และความใส่ใจในบริการ
+                ทำให้ร้านนี้กลายเป็นที่รู้จักและได้รับความนิยมอย่างต่อเนื่องในหมู่คนทำงาน นักศึกษา
+                และครอบครัวที่มองหามื้ออาหารอร่อยในบรรยากาศสบาย ๆ
+
+                หากคุณกำลังมองหาประสบการณ์อาหารไทยแบบดั้งเดิมและอิ่มอร่อยได้ทุกเวลา
+                ร้านพ่อครัวน้อยเป็นตัวเลือกที่ไม่ควรพลาด!
+            </p>
+        </aside>
+        <div class="menu" id="menu"></div>
+
+        <section class="menu-container">
+            <div class="container mt-5">
+                <!-- Main Nav Tabs -->
+                <ul class="nav nav-tabs" id="mainTab" role="tablist" style="justify-content: center;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#section-food" data-toggle="tab">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-beverage" data-toggle="tab">Beverage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-dessert" data-toggle="tab">Dessert</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Food Section -->
+                    <div class="tab-pane fade show active" id="section-food" role="tabpanel">
+                        <!-- Food Sub Nav Tabs -->
+                        <ul class="nav nav-pills mb-3" id="food-subtab" role="tablist"></ul>
+
+                        <!-- Scrollable Container for Food -->
+                        <div id="food-container" class="scroll-container"></div>
+                    </div>
+
+                    <!-- Beverage Section -->
+                    <div class="tab-pane fade" id="section-beverage" role="tabpanel">
+                        <!-- Beverage Sub Nav Tabs -->
+                        <ul class="nav nav-pills mb-3" id="beverage-subtab" role="tablist"></ul>
+
+                        <!-- Scrollable Container for Beverage -->
+                        <div id="beverage-container" class="scroll-container"></div>
+                    </div>
+
+                    <!-- Dessert Section -->
+                    <div class="tab-pane fade" id="section-dessert" role="tabpanel">
+                        <!-- Dessert Sub Nav Tabs -->
+                        <ul class="nav nav-pills mb-3" id="dessert-subtab" role="tablist"></ul>
+
+                        <!-- Scrollable Container for Dessert -->
+                        <div id="dessert-container" class="scroll-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="refferrences mt-5" id="refferrences">
+        <div class="text-center">
+            <div class="h1">แหล่งอ้างอิง</div>
+            <p>แหล่งข้อมูลอ้างอิงที่ใช้ในการพัฒนาเว็บไซต์ และ แหล่งข้อมูลต่างๆที่ใช้ในเว็บไซต์นี้</p>
+        </div>
+        <div class="container p-5 justify-content-center">
+            <div class="row mt-5">
+                <div class="col-md-6 col-sm-12">
+                    <img src="https://github.com/Poompower/WebPro/blob/main/picProject/coding.png?raw=true" alt=""
+                        width=50px draggable="false">
+                    <h3>ส่วนพัฒนาเว็บไวต์</h3>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <img src="https://github.com/Poompower/WebPro/blob/main/picProject/food.png?raw=true" alt=""
+                        width=50px draggable="false">
+                    <h3>ส่วนข้อมูลร้านอาหาร</h3>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
